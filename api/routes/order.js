@@ -27,7 +27,11 @@ router.post('/', function(req, res, next) {
             orderComplete[i] = orderComplete[i] + value[i];
         }
     }
-    console.log(orderComplete);
+    console.log(orderComplete.map((item, idx) => {
+        return [item, idx];
+    }).filter((item) => {
+        return item[0]>0;
+    }));
 
 
     for (let i = 0; i < orderCompleteByUser.length; i++) {
