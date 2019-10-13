@@ -44,7 +44,9 @@ router.post('/', function(req, res, next) {
             }
         }
     }
-    console.log(orderCompleteByUser);
+    console.log(orderCompleteByUser.filter((item) => {
+        return item !== [];
+    }));
 
     resAssembled = {
         complete: orderComplete,
