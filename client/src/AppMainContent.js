@@ -145,7 +145,7 @@ export default class AppMainContent extends React.Component{
                     <button id="Send" onClick={this.sendOrder}>OK</button>
                     {/*TODO: Add sections of the menu*/}
                     {this.state.items.map((item, idx) => {
-                        return <MenuItem name={item.name} ingredients={item.ingredients.concat()} count={item.count} img={item.img} code={item.code} order={this.updateOrder.bind(this)} selected={this.state.orders[idx+1]}/>
+                        return <MenuItem name={item.name} count={item.count} img={item.img} code={item.code} order={this.updateOrder.bind(this)} selected={this.state.orders[idx+1]}/>
                     })}
                     <OrderBar selectedItems={myOrder} menu={this.state.items} complete={completeOrder} byUser={this.state.orderByUser}/>
                     {/*<MyOrder selectedItems={myOrder} menu={this.state.items}/>*/}
