@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import AppMainContent from "./AppMainContent";
+import ServerIP from './index.js'
 
-const ServerIP = "http://localhost:9000/"
 
 class Container extends React.Component{
     constructor(props){

@@ -2,8 +2,8 @@ import React from "react";
 import MenuItem from './MenuItem'
 import OrderBar from './OrderBar'
 import socketIOClient from 'socket.io-client'
+import ServerIP from './index.js'
 
-const ServerIP = "http://192.168.1.12:9000/"
 var socket;
 export default class AppMainContent extends React.Component{
 
