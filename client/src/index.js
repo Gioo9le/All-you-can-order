@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-const ServerIP = "http://188.13.83.100:80/";
+const ServerIP = "http://188.13.83.100:9000/";
 export default ServerIP;
 
 ReactDOM.render(<App />, document.getElementById('root'));
