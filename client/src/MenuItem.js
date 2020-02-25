@@ -38,7 +38,7 @@ export default class MenuItem extends React.Component{
 
     render(){
         return (
-            <div className="MenuItem" code={this.props.code}>{this.props.name} <br/> {this.props.count}Pz <br/>
+            <div className="MenuItem" code={this.props.code}>{this.props.name} <br/> {this.props.code} <br/> {this.props.count}Pz <br/>
                 <button className="RemoveItem" onClick={this.removeItem}>-</button>
                 <img src={this.props.img} className="itemLogo" alt={this.props.name}/>
                 <button className="AddItem" onClick={this.addItem}>+</button>
