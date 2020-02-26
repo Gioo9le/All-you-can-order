@@ -153,7 +153,7 @@ export default class AppMainContent extends React.Component{
                                          img={item.img}
                                          code={item.code}
                                          order={this.updateOrder.bind(this)}
-                                         selected={this.state.orders[idx+1]}
+                                         selected={this.state.listOrder[idx]}
                                          listIdx={idx}/>
                     })}
                     <OrderBar selectedItems={myOrder} menu={this.state.items} complete={completeOrder} byUser={this.state.orderByUser}/>

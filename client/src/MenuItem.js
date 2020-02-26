@@ -32,7 +32,7 @@ export default class MenuItem extends React.Component{
 
     changeItem(code, sign){
         console.log(code.value);
-        this.props.order(code.value, sign);
+        this.props.order(code.value, this.props.listIdx, sign);
 
     }
 
