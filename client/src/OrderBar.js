@@ -72,7 +72,7 @@ class MyOrder extends React.Component{
                 </div>
                 <ul className="OrderList">
                     {this.props.selectItems.map((item) => {
-                        return  <li>{item[1]}  x{item[0]} - {this.props.menu[item[1]-1].name}</li>
+                        return  <li>{this.props.menu[item[1]].code}  x{item[0]} - {this.props.menu[item[1]].name}</li>
                     })}
                 </ul>
                 <button className="OpenMenu" onClick={this.props.toggle}/>

@@ -15,14 +15,15 @@ export default class AppMainContent extends React.Component{
             table: 0,
             user: "",
             items: [],
-            orders: new Array(100),
-            completeOrders: new Array(100),
-            orderByUser: new Array(100),
+            orders: new Array(200),
+            completeOrders: new Array(200),
+            orderByUser: new Array(200),
             nConnectedUser: 0,
-            listOrder: new Array(100),
+            listOrder: new Array(200),
         };
         socket = socketIOClient(ServerIP);
         this.state.orders.fill(0);
+        this.state.listOrder.fill(0);
         this.sendOrder = this.sendOrder.bind(this);
         this.login = this.login.bind(this);
         this.setUserName = this.setUserName.bind(this);
@@ -131,7 +132,13 @@ export default class AppMainContent extends React.Component{
 
     render(){
 
-        let myOrder = this.state.orders.map((item, idx) => {
+        // let myOrder = this.state.orders.map((item, idx) => {
+        //     return [item, idx];
+        // }).filter((item) => {
+        //     return item[0]>0;
+        // });
+
+        let myOrder = this.state.listOrder.map((item, idx) => {
             return [item, idx];
         }).filter((item) => {
             return item[0]>0;
